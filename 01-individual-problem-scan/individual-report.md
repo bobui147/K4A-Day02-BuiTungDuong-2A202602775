@@ -141,51 +141,55 @@ File đính kèm (nếu vẽ riêng): `01-individual-problem-scan-workflow-card-
 
 ---
 
-#### Problem Card #2 — Tổng hợp Meeting Notes sau buổi họp nhóm
+#### Problem Card #2 — Tay ngang SE sang AI: thiếu kiến thức nền
 
 ```text
 Problem 1 câu:
-Thành viên nhóm đồ án phải vừa họp vừa ghi notes dẫn đến mất tập trung, sau đó mất thêm 15-20 phút chỉnh sửa, và bạn nhóm vẫn hay hỏi lại quyết định/action items.
+Học viên có background SE chưa học AI bài bản, khi gặp khái niệm mới (gradient descent, backpropagation, loss function) phải mất 30 phút-1 giờ tìm hiểu qua Google/ChatGPT/thử code mới hiểu được.
 
 Actor:
-Thành viên nhóm đồ án (3-4 người), luân phiên nhau ghi notes mỗi buổi họp.
+Học viên chương trình AI thực chiến có background SE, DevOps, hoặc không phải AI/ML (chiếm ~50-60% lớp).
 
 Thời điểm / bối cảnh:
-2 lần/tuần, mỗi meeting 45-60 phút. Thường họp về tiến độ, phân công task, quyết định kỹ thuật.
+- Trong lúc nghe giảng: nghe thuật ngữ mới nhưng chưa hiểu sâu
+- Khi làm bài tập: cần hiểu khái niệm để implement code
+- Khi đọc tài liệu/paper: gặp công thức/thuật ngữ chưa rõ
 
 Current workflow 3-7 bước:
-1. Bắt đầu meeting, người ghi notes mở Google Docs
-2. Vừa nghe vừa ghi chép (quyết định, action items, ai làm gì, deadline)
-3. Mất tập trung vì vừa nghe vừa ghi → có thể miss thông tin
-4. Sau meeting, chỉnh sửa notes cho rõ ràng hơn (15-20 phút)
-5. Share notes lên Discord/Notion
-6. Bạn nhóm đọc notes và thỉnh thoảng hỏi lại "mình có quyết định gì về database không?"
+1. Nghe giảng hoặc đọc slide, gặp khái niệm mới (VD: "gradient descent")
+2. Ghi chú lại: "cần tìm hiểu gradient descent"
+3. Sau buổi học, Google "gradient descent explained" hoặc "gradient descent tutorial"
+4. Đọc 2-3 articles/blog posts, vẫn chưa hiểu hết (quá academic hoặc quá đơn giản)
+5. Hỏi ChatGPT: "explain gradient descent in simple terms for software engineer"
+6. Đọc giải thích, tìm code example, chạy thử trên Colab
+7. Sau 30p-1h mới hiểu đủ để làm bài tập hoặc follow buổi học tiếp theo
 
 Bottleneck:
-Bước 2-3 — vừa họp vừa ghi làm mất tập trung, dễ miss thông tin. Bước 4 — phải chỉnh sửa lại notes sau meeting vì ghi vội không rõ ràng.
+Bước 4-6 — phải tìm kiếm và đọc nhiều nguồn khác nhau (articles, ChatGPT, code examples) để ghép lại thành hiểu biết đủ dùng. Mất nhiều thời gian vì không có "learning path" rõ ràng từ kiến thức SE sang AI.
 
 Impact:
-- 2 meetings/tuần x 4 tuần = 8 meetings/tháng
-- Mỗi meeting mất 15-20 phút chỉnh sửa notes sau = ~2.5 giờ/tháng chỉ cho việc chỉnh sửa
-- Người ghi notes mất tập trung trong meeting → có thể miss quyết định quan trọng
-- Bạn nhóm hỏi lại 2-3 lần/tuần vì notes không đủ rõ hoặc thiếu action items
+- Mỗi buổi học có 3-5 khái niệm mới, mỗi khái niệm mất 30p-1h → ~2-5 giờ/tuần chỉ để hiểu khái niệm cơ bản
+- Không hiểu kịp → làm bài tập sai hoặc muộn → mất điểm
+- Stress và cảm giác "bị bỏ lại phía sau" so với bạn có background AI/ML
+- Quan sát: 50-60% bạn trong lớp hay hỏi lại khái niệm cơ bản trên Discord
 
 Success metric:
-- Giảm thời gian chỉnh sửa sau meeting từ 15-20 phút xuống ~5 phút
-- Giảm số lần bạn nhóm hỏi lại quyết định/action items từ 2-3 lần/tuần xuống <1 lần/tuần
-- Quality check: notes phải có đủ quyết định, action items, người phụ trách, deadline
+- Giảm thời gian hiểu 1 khái niệm mới từ 30p-1h xuống ~10-15 phút
+- Giảm số lần phải Google/ChatGPT nhiều lần cho cùng 1 khái niệm
+- Quality check: sau khi học có thể giải thích được khái niệm bằng từ ngữ của mình, và làm được bài tập liên quan
 
 Non-AI alternative:
-- Template meeting notes có sẵn sections: Decisions / Action Items / Owner / Deadline
-- Record meeting rồi sau đó nghe lại để ghi (nhưng tốn thêm thời gian)
-- Dùng Notion database để track action items
-→ Giảm được thiếu sót, nhưng vẫn tốn thời gian chỉnh sửa
+- Glossary/từ điển thuật ngữ AI cho SE: định nghĩa ngắn gọn + code example
+- Pre-reading list trước mỗi buổi học: "nếu chưa biết X, đọc tài liệu Y"
+- Study group với bạn có background AI/ML để hỏi trực tiếp
+- Office hours với mentor để hỏi khái niệm chưa rõ
+→ Giảm được thời gian tìm kiếm, nhưng vẫn cần tự đọc và tổng hợp
 
 AI hypothesis:
-Record meeting audio → AI transcribe + tổng hợp thành notes có cấu trúc (decisions, action items, owner) → người ghi notes review/edit/bổ sung → share lên Discord.
+Khi gặp khái niệm mới → hỏi AI tutor được train trên curriculum chương trình: "explain gradient descent for SE background, relate to concepts I know" → AI giải thích bằng analogy quen thuộc (VD: gradient descent như debug code bằng binary search) + code example + gợi ý bài tập thực hành → học viên hiểu nhanh hơn.
 
 Quick gut:
-[x] Workflow
+[x] Workflow (AI tutor hỗ trợ giải thích, học viên vẫn tự học và thực hành)
 [ ] No AI / process fix
 [ ] Rule
 [ ] Agent
@@ -195,24 +199,27 @@ Quick gut:
 **Draft workflow Card #2:**
 
 ```text
-CURRENT STATE — 60 phút meeting + 15-20 phút chỉnh sửa
+CURRENT STATE — 30 phút-1 giờ/khái niệm
 
-[1 Meeting bắt đầu: 0']
-→ [2 Vừa nghe vừa ghi notes: 45-60']  <-- mất tập trung, dễ miss info
-→ [3 Meeting kết thúc: 0']
-→ [4 Chỉnh sửa notes cho rõ ràng: 15-20']  <-- bottleneck
-→ [5 Share notes: 2']
-→ [6 Bạn nhóm đọc và hỏi lại: ?]
+[1 Nghe giảng, gặp khái niệm mới: 0']
+→ [2 Ghi chú "cần tìm hiểu": 1']
+→ [3 Google search: 5']
+→ [4 Đọc 2-3 articles: 10-15']  <-- vẫn chưa rõ
+→ [5 Hỏi ChatGPT: 5']
+→ [6 Đọc giải thích + tìm code example: 10-15']  <-- bottleneck
+→ [7 Chạy thử code trên Colab: 5-10']
+→ [8 Hiểu đủ để dùng: ?]
 
-FUTURE STATE — 60 phút meeting + 5 phút review
+FUTURE STATE — 10-15 phút/khái niệm
 
-[1 Meeting bắt đầu + record audio: 1']
-→ [2 Tập trung họp, không phải ghi: 45-60']  <-- tăng focus
-→ [3 AI transcribe + tổng hợp: 2']           -- Workflow step
-→ [4 Người ghi review + edit: 5']            <-- human boundary
-→ [5 Share notes: 2']
+[1 Nghe giảng, gặp khái niệm mới: 0']
+→ [2 Hỏi AI tutor ngay: "explain gradient descent for SE, relate to what I know": 1']
+→ [3 AI giải thích bằng analogy quen thuộc + code example: 2']  -- Workflow step
+→ [4 Học viên đọc giải thích: 5']  <-- human boundary
+→ [5 Học viên chạy thử code example: 5']
+→ [6 Học viên tự kiểm tra hiểu: làm quiz/bài tập nhỏ: 5']
 
-Fallback: Nếu AI transcribe sai hoặc thiếu → nghe lại audio và tự ghi bổ sung
+Fallback: Nếu AI giải thích vẫn chưa rõ → hỏi mentor/bạn cùng lớp/office hours
 ```
 
 File đính kèm: `01-individual-problem-scan-workflow-card-2.png`
