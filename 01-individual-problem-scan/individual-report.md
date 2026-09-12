@@ -56,7 +56,7 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 | Rank | Problem (copy từ bảng scan) | Vì sao chọn (2-3 ý) | Điều còn chưa chắc |
 |---|---|---|---|
 | 1 | Viết weekly progress report cho đồ án tốt nghiệp | - Workflow rõ ràng 5-6 bước<br>- Có metric cụ thể: 40 phút → có thể giảm xuống ~15 phút<br>- Lặp lại mỗi tuần nên impact tích lũy cao<br>- Có thể so sánh Rule/Workflow/Agent | Cách đo chất lượng narrative: làm sao biết AI draft "đủ tốt" để giảng viên không hỏi lại? |
-| 2 | Tổng hợp meeting notes sau buổi họp nhóm | - Pain rõ: vừa họp vừa ghi làm mất tập trung<br>- Bạn nhóm hay hỏi lại quyết định (evidence có thật)<br>- Workflow 3-4 bước, có thể tối ưu bước ghi/chỉnh sửa | Quality check: AI có bỏ sót quyết định quan trọng không? |
+| 2 | Tay ngang từ SE sang AI: thiếu kiến thức nền, mỗi khái niệm mới mất 30p-1h để hiểu | - Pain rõ và phổ biến: 50-60% lớp cũng gặp vấn đề này<br>- Có workflow tìm hiểu: Google → ChatGPT → đọc → thử code<br>- Impact cao: ảnh hưởng làm bài tập và hiểu bài giảng<br>- Metric đo được: thời gian hiểu 1 khái niệm | Khó đo "đã hiểu" ra sao: test bằng cách nào? làm được bài tập? giải thích được? |
 | 3 | Quá nhiều tài liệu slide/video chưa kịp đọc hết | - Impact rộng: ảnh hưởng đến làm bài tập và hiểu bài<br>- AI có thể giúp tóm tắt/gợi ý ưu tiên<br>- Metric: thời gian tìm thông tin cần dùng | Scope có thể rộng: cần thu hẹp thành "tìm thông tin cụ thể trong slide/video" thay vì "đọc hết" |
 
 ### 2.2. Problem Cards chi tiết (lặp lại cho cả 3 cards)
